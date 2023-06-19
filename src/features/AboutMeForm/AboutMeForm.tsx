@@ -1,4 +1,4 @@
-import { FC, useEffect } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SubmitHandler, useForm, Controller, FormState } from 'react-hook-form';
 import { useAppDispatch, useAppSelector } from 'redux/types';
@@ -20,9 +20,12 @@ interface About {
 type AboutFormState = FormState<About> & About;
 
 const AboutMeForm: FC = () => {
-  const dispatch = useAppDispatch();
-  const { formData } = useAppSelector(state => state.formData);
   const navigate = useNavigate();
+  const dispatch = useAppDispatch();
+
+  const { formData } = useAppSelector(state => state.formData);
+  const [updated, setUpdated] = useState(false);
+
   const [fetchUserForm, { isSuccess, isError, error }
   ] = useSendUserFormMutation();
 
@@ -34,9 +37,12 @@ const AboutMeForm: FC = () => {
     resolver: yupResolver(aboutSchema),
   });
 
+
   useEffect(() => {
-    fetchUserForm(formData)
-  }, [fetchUserForm, formData,]);
+    if (updated) {
+      fetchUserForm(formData);
+    }
+  }, [fetchUserForm, formData, updated]);
 
 
   const submitForm: SubmitHandler<AboutFormState | About> = (data, event) => {
@@ -45,6 +51,7 @@ const AboutMeForm: FC = () => {
     dispatch(
       setFormData({ ...formData, about })
     )
+    setUpdated(true);
   };
 
 
