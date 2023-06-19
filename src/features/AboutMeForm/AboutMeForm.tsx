@@ -90,7 +90,11 @@ const AboutMeForm: FC = () => {
           onClick={() => {
             navigate("/step_2"); dispatch(setPercent({ percent: 50 }))
           }} />
-        <Button type="submit" title="Отправить" id="button-send" />
+        <Button
+          title="Отправить"
+          type="submit"
+          id="button-send"
+        />
       </div>
     </form>
 

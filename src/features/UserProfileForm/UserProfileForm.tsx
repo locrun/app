@@ -15,6 +15,7 @@ interface FormValues {
   phone: string
   email: string
 }
+
 const UserProfileForm: FC = () => {
   const navigate = useNavigate()
   const dispatch = useAppDispatch()
@@ -29,7 +30,8 @@ const UserProfileForm: FC = () => {
   })
   const { handleSubmit, control, formState: { errors } } = form
 
-  const submitForm: SubmitHandler<FormValues> = (data) => {
+  const submitForm: SubmitHandler<FormValues> = (data, event) => {
+    event?.preventDefault()
     const { phone, email } = data
     dispatch(setFormData({ ...formData, phone, email }))
     navigate("/step_1")
@@ -46,7 +48,7 @@ const UserProfileForm: FC = () => {
           render={(props) => (
             <InputMask
               name="tel"
-              className={s.input}
+              className={s.inputMask}
               mask="+7 (999) 999-99-99"
               id="tel"
               placeholder="+7 999 999-99-99"
@@ -67,7 +69,7 @@ const UserProfileForm: FC = () => {
           render={({ field }) => (
             <Input
               {...field}
-              className={s.input}
+              className={s.inputEmail}
               type="email"
               name='email'
               id="email"
@@ -77,7 +79,7 @@ const UserProfileForm: FC = () => {
         />
         {errors.email && <span className={s.confirm}>{errors.email?.message}</span>}
       </div>
-      <Button type="submit" className={s.button} title="Начать" />
+      <Button type="submit" id="button-start" className={s.button} title="Начать" />
     </form >
   )
 }

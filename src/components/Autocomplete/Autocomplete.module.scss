@@ -1,3 +1,5 @@
+@import "../../styles/variables/variables.scss";
+
 .select {
   width: 300px;
   font-weight: 400;
@@ -7,17 +9,17 @@
   [class*="-control"] {
     height: 44px;
     outline: none;
-    background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.16);
+    background: $white;
+    border: $border;
     border-radius: 4px;
 
     &:hover {
-      border: 1px solid rgba(0, 0, 0, 0.16);
-      background: #ffffff;
+      border: $border;
+      background: $white;
     }
 
     &:focus-within {
-      border: 1px solid rgba(0, 0, 0, 0.16);
+      border: $border;
       outline: none;
       box-shadow: none;
       background: rgb(232, 240, 254);
@@ -29,23 +31,23 @@
   [class*="-option"] {
     min-height: 40px;
     padding: 10px 15px;
-    background-color: white;
+    background-color: $white;
     position: relative;
     z-index: 100;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    color: #333333;
+    color: $signal-black;
     cursor: pointer;
 
     &:hover {
-      background-color: #f8f8f8;
+      background-color: $smoky-white;
     }
   }
   [class*="menu"] {
     margin: 0;
     padding: 0;
-    background: #ffffff;
+    background: $white;
     box-shadow: 0 4px 12px 2px rgba(0, 0, 0, 0.02);
     border-radius: 4px;
   }
@@ -64,7 +66,7 @@
   [class*="-placeholder"] {
     margin: 0;
     padding: 0;
-    color: gray;
+    color: hsl(0, 0%, 50%);
   }
   [class*="-Input"] {
     margin: 0;

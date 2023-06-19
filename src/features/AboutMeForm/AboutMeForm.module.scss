@@ -12,17 +12,15 @@
   width: 100%;
   min-height: 84px;
   max-height: 200px;
-
   padding: 12px 12px 12px 12px;
-
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.16);
+  background: $white;
+  border: $border;
   border-radius: 4px;
   resize: vertical;
-  color: rgba(0, 0, 0, 0.48);
+  color: $color;
 }
 .textarea::placeholder {
-  color: rgba(0, 0, 0, 0.48);
+  color: $color;
 }
 
 .buttons {
@@ -36,7 +34,7 @@
   color: $slate-blue;
 }
 .confirm {
-  color: red;
+  color: $red;
   text-align: left;
   font-size: 14px;
   align-self: flex-start;

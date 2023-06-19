@@ -40,7 +40,8 @@ const AdvForm: FC = () => {
   const { fields: advantagesFields, append, remove } =
     useFieldArray({ control, name: "advantages" })
 
-  const submitForm: SubmitHandler<Inputs> = (data) => {
+  const submitForm: SubmitHandler<Inputs> = (data, event) => {
+    event?.preventDefault()
     const { advantages, checkboxGroup, radioGroup }: any = data;
     dispatch(setFormData({
       ...formData,
@@ -66,12 +67,15 @@ const AdvForm: FC = () => {
                   <Input
                     {...field}
                     className={s.input}
-                    id="advantages"
+                    id={`field-advatages-${index + 1}`}
                     placeholder="Placeholder"
                   />
                 )}
               />
-              <button type="button" onClick={() => remove(index)}>
+              <button
+                type="button"
+                id="button-remove"
+                onClick={() => remove(index)}>
                 <IconSvg id="#delete" className={s.removeBtn} />
               </button>
               {errors.advantages &&
@@ -84,6 +88,7 @@ const AdvForm: FC = () => {
         </div>
         <Button
           type="button"
+          id="button-add"
           className={s.append}
           onClick={() => append({ name: "" })}
         />
@@ -160,12 +165,17 @@ const AdvForm: FC = () => {
       <div className={s.buttons}>
         <Button
           title="Назад"
+          id="button-back"
           className={s.comebackBtn}
           onClick={() => {
             navigate("/step_1"); dispatch(setPercent({ percent: 0 }))
           }}
         />
-        <Button type="submit" className={s.next} title="Далее" />
+        <Button
+          title="Далее"
+          type="submit"
+          id="button-next"
+          className={s.next} />
       </div>
     </form >
   )

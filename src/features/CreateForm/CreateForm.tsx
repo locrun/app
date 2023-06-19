@@ -39,7 +39,8 @@ const CreateForm: FC = () => {
   const { handleSubmit, control, formState } = form
   const { errors } = formState;
 
-  const submitForm: SubmitHandler<FormValues> = (data: FormValues) => {
+  const submitForm: SubmitHandler<FormValues> = (data: FormValues, event) => {
+    event?.preventDefault()
     const { nickname, name, surname, sex } = data
     dispatch(
       setFormData({ ...formData, nickname, name, surname, sex })
@@ -59,6 +60,7 @@ const CreateForm: FC = () => {
             <Input
               {...field}
               name='name'
+              id="field-nickname"
               placeholder="Placeholder"
             />
           )}
@@ -76,6 +78,7 @@ const CreateForm: FC = () => {
             <Input
               {...field}
               name='name'
+              id="name"
               placeholder="Placeholder"
             />
           )}
@@ -94,6 +97,7 @@ const CreateForm: FC = () => {
             <Input
               {...field}
               name='name'
+              id="field-surname"
               placeholder="Placeholder"
             />
           )}
@@ -111,6 +115,7 @@ const CreateForm: FC = () => {
             <Autocomplete
               value={value}
               options={options}
+              id="field-sex"
               onChange={onChange}
             />
           )}
@@ -123,10 +128,16 @@ const CreateForm: FC = () => {
       <div className={s.buttons}>
         <Button
           title="Назад"
+          id="button-back"
           className={s.comebackBtn}
           onClick={() => navigate("/")}
         />
-        <Button type="submit" className={s.next} title="Далее" />
+        <Button
+          title="Далее"
+          id="button-next"
+          type="submit"
+          className={s.next}
+        />
       </div>
     </form >
   )

@@ -2,10 +2,21 @@
 $slate-blue: #5558fa;
 $signal-black: #333333;
 $dark-gray: #858585;
+$black-gray: #212830;
 $lavender: #d5e4f7;
+$white: #ffffff;
+$pale-blue: #f4f4f5;
+$red: red;
+$smoky-white: #f8f8f8;
+$white-aluminum: #a6a6a6;
 /*btn_colors*/
 $btn-hover: brightness(0.9);
 $btn-focus: brightness(0.8);
 $btn-active: brightness(0.9);
 /*transition*/
 $transition: all 0.3s ease-in-out;
+
+//input-styles
+$border: 1px solid rgba(0, 0, 0, 0.16);
+$color: rgba(0, 0, 0, 0.48);
+$background: rgba(0, 0, 0, 0.04);

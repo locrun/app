@@ -21,9 +21,9 @@
   height: 44px;
   padding: 12px;
   margin-top: -8px;
-  border: 1.5px solid #5558fa;
-  background: white;
-  color: #5558fa;
+  border: 1.5px solid $slate-blue;
+  background: $white;
+  color: $slate-blue;
   font-size: 30px;
 
   &:after {
@@ -38,7 +38,7 @@
 }
 
 .confirm {
-  color: red;
+  color: $red;
 }
 
 .buttons {

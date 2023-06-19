@@ -1,3 +1,5 @@
+@import "../../styles/variables/variables.scss";
+
 .wrapper {
   margin-bottom: 100px;
   padding-left: 8px;
@@ -6,7 +8,7 @@
 .current {
   width: 16px;
   height: 16px;
-  background: #5558fa !important;
+  background: $slate-blue !important;
   border-radius: 100px;
   position: relative;
 }
@@ -20,12 +22,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #ffffff;
+  background: $white;
 }
 .finished {
   width: 16px;
   height: 16px;
-  background: #5558fa !important;
+  background: $slate-blue !important;
   border-radius: 100px;
   position: relative;
 }
@@ -41,7 +43,7 @@
   left: calc(50% - 16px / 2);
   width: 16px;
   height: 16px;
-  background: #a6a6a6;
+  background: $white-aluminum;
   border-radius: 100px;
 }
 
@@ -54,7 +56,7 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  color: #5558fa;
+  color: $slate-blue;
 }
 
 .step_count_2 {
@@ -66,7 +68,7 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  color: #5558fa;
+  color: $slate-blue;
 }
 
 .step_count_3 {
@@ -78,5 +80,5 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  color: #5558fa;
+  color: $slate-blue;
 }
