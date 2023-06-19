@@ -1,4 +1,5 @@
 import { FC, Suspense } from 'react'
+
 import { Router } from 'routes/Router';
 import Preloader from 'components/Preloader';
 

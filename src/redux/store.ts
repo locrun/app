@@ -15,6 +15,7 @@ import {
 
 import formDataReducer from "./slices/formSlice";
 import progressBarReducer from "./slices/progressBarSlice";
+import modalWindowReducer from "./slices/modalWindowSlice";
 import { formApi } from "../shared/api/formSend";
 
 export type RootState = ReturnType<typeof store.getState>;
@@ -28,6 +29,7 @@ const persistConfig = {
 const rootReducer = combineReducers({
   formData: formDataReducer,
   progressBar: progressBarReducer,
+  modalWindow: modalWindowReducer,
   [formApi.reducerPath]: formApi.reducer,
 });
 const persistedReducer = persistReducer(persistConfig, rootReducer);

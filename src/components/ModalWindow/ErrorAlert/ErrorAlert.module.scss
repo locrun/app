@@ -1,0 +1,63 @@
+@import "../../../styles/variables/variables.scss";
+@import "../../../styles/variables/variables.scss";
+
+.flexCol {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.flexRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-family: SBSansInterfaceSemibold;
+  font-size: 20px;
+  line-height: 26px;
+  color: $signal-black;
+}
+.errorIcon {
+  width: 38px;
+  height: 38px;
+}
+.succesWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.succesWrapper::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: rgba(232, 78, 88, 0.15);
+  border-radius: 100px;
+}
+.topCloseModalBtn {
+  width: 28px;
+  height: 28px;
+  background: $background;
+  border-radius: 100px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.closeIcon {
+  width: 11px;
+  height: 11px;
+}
+
+.bottomCloseBtn {
+  align-self: end;
+}

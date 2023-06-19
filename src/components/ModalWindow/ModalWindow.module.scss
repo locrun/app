@@ -1,0 +1,28 @@
+@import "../../styles/variables/variables.scss";
+
+.modalOpen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $modal;
+  z-index: 10;
+  position: fixed;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.modalContent {
+  padding: 32px;
+  width: 460px;
+  height: 312px;
+  background: $white;
+  box-shadow: $shadow;
+  border-radius: 12px;
+}
