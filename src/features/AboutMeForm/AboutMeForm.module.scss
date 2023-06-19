@@ -1,0 +1,44 @@
+@import "../../styles/variables/variables.scss";
+
+.textAreaWrapper {
+  margin-top: 8px;
+  margin-bottom: 85px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 84px;
+  max-height: 200px;
+
+  padding: 12px 12px 12px 12px;
+
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+  resize: vertical;
+  color: rgba(0, 0, 0, 0.48);
+}
+.textarea::placeholder {
+  color: rgba(0, 0, 0, 0.48);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.comebackBtn {
+  padding: 11px 16px;
+  border: 1.5px solid $slate-blue;
+  background: none;
+  color: $slate-blue;
+}
+.confirm {
+  color: red;
+  text-align: left;
+  font-size: 14px;
+  align-self: flex-start;
+  margin-top: -15px;
+}

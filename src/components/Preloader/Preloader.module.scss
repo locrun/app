@@ -1,0 +1,52 @@
+.spinnerContainer {
+  z-index: 99;
+  width: 200px;
+  padding: 10px;
+  top: 50%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  left: 40%;
+  border-radius: 0.5rem;
+  align-items: center;
+  @media screen and (max-width: 768px) {
+    width: 150px;
+  }
+}
+
+.spinnerContainer p {
+  text-align: center;
+  margin: 5px 0 0 0;
+  font-size: 24px;
+  animation: loading 2s ease-in-out infinite;
+}
+
+.upper {
+  animation: rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes loading {
+  0% {
+    color: #fff;
+  }
+  50% {
+    color: #666;
+  }
+  100% {
+    color: #fff;
+  }
+}

@@ -1,0 +1,86 @@
+@import url(//db.onlinewebfonts.com/c/37086b994764dba84b2ee0f1083bfeed?family=SB+Sans+Interface);
+
+@font-face {
+  font-family: "SB Sans Interface";
+  src: url("//db.onlinewebfonts.com/t/37086b994764dba84b2ee0f1083bfeed.woff2")
+    format("woff2");
+  font-style: normal;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  font-family: serif;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: SB Sans Interface;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 320px;
+  background: #f4f4f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.flex {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container {
+  min-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.main {
+  width: 900px;
+  min-height: 704px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 24px;
+}
+
+button {
+  padding: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  font-family: "SB Sans Interface";
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+
+input {
+  outline: none;
+  font-family: "SB Sans Interface";
+}
+input:focus {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+textarea {
+  outline: none;
+  border: none;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+textarea:focus {
+  background: rgba(0, 0, 0, 0.04);
+}
+input:-webkit-autofill {
+  -webkit-text-fill-color: rgba(0, 0, 0, 0.48);
+  -webkit-box-shadow: 0 0 0px 1000px none inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

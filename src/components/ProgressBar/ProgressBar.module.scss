@@ -1,0 +1,82 @@
+.wrapper {
+  margin-bottom: 100px;
+  padding-left: 8px;
+}
+
+.current {
+  width: 16px;
+  height: 16px;
+  background: #5558fa !important;
+  border-radius: 100px;
+  position: relative;
+}
+.current:after {
+  display: block;
+  content: "";
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+}
+.finished {
+  width: 16px;
+  height: 16px;
+  background: #5558fa !important;
+  border-radius: 100px;
+  position: relative;
+}
+.finished:after {
+  display: block;
+  content: url("../../assets/image/check.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+}
+.next {
+  left: calc(50% - 16px / 2);
+  width: 16px;
+  height: 16px;
+  background: #a6a6a6;
+  border-radius: 100px;
+}
+
+.step_count_1 {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 28px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #5558fa;
+}
+
+.step_count_2 {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 28px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #5558fa;
+}
+
+.step_count_3 {
+  display: block;
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 28px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #5558fa;
+}
