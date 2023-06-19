@@ -17,7 +17,7 @@ const Profile: FC = () => {
         <span>Р</span>
         <span>Н</span>
       </div>
-      <div className={s.margin}>
+      <div>
         <h3 className={s.person}>Рунар Назмутдинов</h3>
         <ul className={s.list}>
           {

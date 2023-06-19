@@ -7,15 +7,13 @@ import ProgressBar from 'components/ProgressBar'
 
 const Step_1: FC = () => {
   return (
-    <>
+    <ContentWrapper>
       <Helmet>
         <title>Step_1</title>
       </Helmet>
-      <ContentWrapper>
-        <ProgressBar />
-        <CreateForm />
-      </ContentWrapper>
-    </>
+      <ProgressBar />
+      <CreateForm />
+    </ContentWrapper>
   )
 }
 

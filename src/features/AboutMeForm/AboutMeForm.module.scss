@@ -2,10 +2,17 @@
 
 .textAreaWrapper {
   margin-top: 8px;
-  margin-bottom: 85px;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
+  @media (min-width: 640px) {
+    margin-bottom: 65px;
+  }
+  @media (min-width: 789px) {
+    margin-bottom: 85px;
+  }
 }
 
 .textarea {

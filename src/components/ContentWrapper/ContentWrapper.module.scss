@@ -1,8 +1,17 @@
 @import "../../styles/variables/variables.scss";
 
 .wrapper {
-  width: 900px;
-  padding: 67px 110px 80px 110px;
+  max-width: 900px;
+  margin-top: 25px;
+  padding: 37px 20px 40px 20px;
   background: $white;
   border-radius: 24px;
+
+  @media (min-width: 530px) {
+    padding: 67px 60px 80px 60px;
+  }
+
+  @media (min-width: 900px) {
+    padding: 67px 110px 80px 110px;
+  }
 }

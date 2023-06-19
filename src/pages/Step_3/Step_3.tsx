@@ -6,16 +6,13 @@ import AboutMeForm from 'features/AboutMeForm'
 
 const Step_3: FC = () => {
   return (
-    <>
+    <ContentWrapper>
       <Helmet>
         <title>Step_3</title>
       </Helmet>
-      <ContentWrapper>
-        <ProgressBar />
-        <AboutMeForm />
-      </ContentWrapper>
-    </>
+      <ProgressBar />
+      <AboutMeForm />
+    </ContentWrapper>
   )
 }
-
 export default Step_3

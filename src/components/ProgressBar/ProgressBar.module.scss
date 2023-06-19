@@ -1,8 +1,15 @@
 @import "../../styles/variables/variables.scss";
 
 .wrapper {
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   padding-left: 8px;
+
+  @media (min-width: 640px) {
+    margin-bottom: 80px;
+  }
+  @media (min-width: 789px) {
+    margin-bottom: 100px;
+  }
 }
 
 .current {

@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import BaseSelect, { ActionMeta, SingleValue, OptionProps, components } from "react-select"
+import BaseSelect, { ActionMeta, SingleValue, OptionProps, components, GroupBase } from "react-select"
 
 import { SelectOption } from 'shared/options'
 import s from "./Autocomplete.module.scss"
@@ -14,13 +14,14 @@ interface SelectProps {
 
 const Autocomplete: FC<SelectProps> = ({ options, value, id, onChange }) => {
 
-  const Option: FC<OptionProps<SelectOption | any>> = props => {
-    let value = props.data.value
+  const Option: FC<OptionProps<any, boolean, GroupBase<SelectProps>>> = props => {
     return (
       <components.Option {...props}>
         <div className={s.flex}>
           <span
-            id={value === "man" ? "field-sex-option-man" : "field-sex-option-woman"}>{value}</span>
+            id={props.data.value === "man" ?
+              "field-sex-option-man" : "field-sex-option-woman"}>
+            {props.data.value}</span>
         </div>
       </components.Option>
     )

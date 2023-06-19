@@ -6,15 +6,13 @@ import AdvForm from 'features/AdvfForm.tsx';
 
 const Step_2: FC = () => {
   return (
-    <>
+    <ContentWrapper>
       <Helmet>
         <title>Step_2</title>
       </Helmet>
-      <ContentWrapper>
-        <ProgressBar />
-        <AdvForm />
-      </ContentWrapper>
-    </>
+      <ProgressBar />
+      <AdvForm />
+    </ContentWrapper>
   )
 }
 export default Step_2;
