@@ -1,46 +1,40 @@
-# Getting Started with Create React App
+# Тестовое задание для поступления в FrontCloudCamp
+Результаты выполнения тестового задания следует код опубликовать на GitHub и захостить на любой открытой платформе (например, Github Pages) 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Разработка формы описания профиля
+Требуется разработать форму отправки данных по готовому макету.
 
-## Available Scripts
+### Технические требования:
+Для разработки приложения использовать [макет](https://www.figma.com/file/rzIp6awR6dGFVrcxcCEwzD/FrontCloudCamp?type=design&node-id=0-1&t=txYEkm69bRXkp06a-0)
 
-In the project directory, you can run:
+В рамках дизайна формы реализовано 3 отдельных таба(шага) формы, которые можно переключать между собой. При переходе от таба к табу (в том числе возвращаясь на предыдущий) информация должна сохранятся.
 
-### `npm start`
+На первом экране необходимо добавить информацию о себе и по нажатию на кнопку будет происходить переход на форму. При переходе должен меняться роут.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+На каждом этапе формы нужно валидировать значения конкретного шага
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+После отправки формы показывать модальное окно с success или error. Модалку нужно будет разработать самому, не используя сторонние библиотеки или ui-компоненты.
 
-### `npm test`
+Для отправки формы использовать api https://api.sbercloud.ru/content/v1/bootcamp/frontend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Адаптивная версия обязательна, способ реализации по твоему выбору
 
-### `npm run build`
+### Валидация и описание полей
+* nickname - строковое значение, максимальная длина 30 символов, могут быть просто буквы и цифры (спец символы запрещены)
+* name - строковое значение, максимальная длина 50 символов, только буквы
+* sername - строковое значение, максимальная длина 50 символов, только буквы
+* phone - строковое значение, форма записи +7 (900) 000-00-00 - реализовать маску ввода, +7, (), -, уже подставленные символы, валидация - цифры
+* email - строковое значение, валидация на email стандартная @ и .домен
+* sex - enum 'man' | 'woman' реализовать как select
+* advantages - массив строк, основной критерий - массив строк. По нажатию на “Плюс” должно добавляться новое поле и так же валидироваться.
+* radio - number блок, в дизайне должна быть группа элементов RadioGroup
+* checkbox - массив number, в дизайне должна быть группа элементов CheckboxGroup
+* about - textarea блок максимальная длина 200 символов, в правом нижнем углу добавить счётчик символов без пробелов
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Рекомендуемый стек:
+* React
+* Typescript
+* Redux или Redux-Toolkit, RTK Query (A proposal for bundling reducers, action types and actions when using Redux)
+* Styled-components | scss modules | css modules
+* Formik | react final form | react hook form
+* Yup
