@@ -40,7 +40,6 @@ const CreateForm: FC = () => {
   const { errors } = formState;
 
   const submitForm: SubmitHandler<FormValues | any> = (data: FormValues, event) => {
-    console.log(data)
     event?.preventDefault()
     const { nickname, name, surname, sex } = data
     dispatch(

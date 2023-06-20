@@ -31,7 +31,9 @@ const AdvForm: FC = () => {
     defaultValues: {
       advantages: defaultAdvantages.length > 0 ? defaultAdvantages :
         [{ name: "" }, { name: "" }, { name: "" }],
-      checkboxGroup: formData.checkedCheckboxes.toString().split(","),
+      checkboxGroup: formData.checkedCheckboxes.length > 0 ?
+        formData.checkedCheckboxes?.toString().split(",") :
+        [],
       radioGroup: formData.selectedRadios[0]?.toString()
     },
     resolver: yupResolver(advFormSchema),

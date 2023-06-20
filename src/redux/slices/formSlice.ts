@@ -10,7 +10,7 @@ interface FormState {
   surname: string;
   sex: SelectOption;
   selectedAdvantages: { name: string }[];
-  checkedCheckboxes: number[];
+  checkedCheckboxes: number[] | [];
   selectedRadios: number[];
   about: string;
 }
@@ -38,6 +38,7 @@ export const formSlice = createSlice({
   initialState,
   reducers: {
     setFormData: (state, action: PayloadAction<FormState>) => {
+      console.log(action.payload);
       state.formData = action.payload;
     },
   },

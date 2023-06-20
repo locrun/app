@@ -43,10 +43,7 @@ export const createFormSchema = yup.object().shape({
     }),
 });
 
-const checkboxGroupArraySchema = yup
-  .array()
-  .of(yup.string())
-  .min(1, "Выберите вариант");
+const checkboxGroupArraySchema = yup.array().min(1, "Выберите вариант");
 
 const radioGroupSchema = yup.string().required("Выберите вариант");
 
