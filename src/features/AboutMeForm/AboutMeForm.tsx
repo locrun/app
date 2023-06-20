@@ -66,11 +66,10 @@ const AboutMeForm: FC = () => {
       {
         isOpen &&
         <ModalWindow>
-          {isError && <ErrorAlert />}
           {isSuccess && < SuccessAlert />}
+          {isError && <ErrorAlert />}
         </ModalWindow>
       }
-
       <form onSubmit={handleSubmit(submitForm)} >
         <InputLabel label={"About"} />
         <div className={s.textAreaWrapper}>
@@ -103,7 +102,6 @@ const AboutMeForm: FC = () => {
             </span>
           )}
         </div>
-
         <div className={s.buttons}>
           <Button
             title="Назад"
@@ -120,8 +118,6 @@ const AboutMeForm: FC = () => {
         </div>
       </form>
     </>
-
-
   )
 }
 export default AboutMeForm

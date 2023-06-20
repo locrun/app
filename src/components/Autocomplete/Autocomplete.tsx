@@ -1,20 +1,20 @@
 import { FC } from 'react'
-import BaseSelect, { ActionMeta, SingleValue, OptionProps, components, GroupBase } from "react-select"
+import BaseSelect, { ActionMeta, SingleValue, OptionProps, components, GroupBase, MultiValue } from "react-select"
 
 import { SelectOption } from 'shared/options'
 import s from "./Autocomplete.module.scss"
 
 interface SelectProps {
   options: SelectOption[]
-  value: SelectOption | {}
+  value: SelectOption
   id: string
-  onChange?: (newValue: SingleValue<SelectOption | {}>, actionMeta: ActionMeta<SelectOption | {}>) => void
+  onChange?: (newValue: SingleValue<SelectOption> | MultiValue<SelectOption>, actionMeta: ActionMeta<SelectOption>) => void | undefined
   placeholder?: string
 }
 
 const Autocomplete: FC<SelectProps> = ({ options, value, id, onChange }) => {
 
-  const Option: FC<OptionProps<any, boolean, GroupBase<SelectProps>>> = props => {
+  const Option: FC<OptionProps<SelectOption, boolean, GroupBase<SelectOption>>> = props => {
     return (
       <components.Option {...props}>
         <div className={s.flex}>
@@ -26,7 +26,6 @@ const Autocomplete: FC<SelectProps> = ({ options, value, id, onChange }) => {
       </components.Option>
     )
   }
-
 
   return (
     <BaseSelect

@@ -8,7 +8,7 @@ interface FormState {
   nickname: string;
   name: string;
   surname: string;
-  sex: SelectOption | {};
+  sex: SelectOption;
   selectedAdvantages: { name: string }[];
   checkedCheckboxes: number[];
   selectedRadios: number[];
@@ -26,7 +26,7 @@ const initialState: FormStateContainer = {
     nickname: "",
     name: "",
     surname: "",
-    sex: {},
+    sex: { value: "Не выбрано", label: "Не выбрано" },
     selectedAdvantages: [],
     checkedCheckboxes: [],
     selectedRadios: [],

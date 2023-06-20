@@ -1,9 +1,14 @@
+export enum Gender {
+  MAN = "man",
+  WOMAN = "woman",
+}
+
 export interface SelectOption {
-  value: "man" | "woman";
+  value: Gender | string;
   label: string;
 }
 
 export const options: SelectOption[] = [
-  { value: "man", label: "man" },
-  { value: "woman", label: "woman" },
+  { value: Gender.MAN, label: "man" },
+  { value: Gender.WOMAN, label: "woman" },
 ];

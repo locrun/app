@@ -32,7 +32,15 @@ export const createFormSchema = yup.object().shape({
     .required("Обязательное поле")
     .matches(/^([a-zA-Zа-яА-ЯёЁ]+)$/, "Может содержать только буквы"),
 
-  sex: yup.object().required("Выберете значение"),
+  sex: yup
+    .object({
+      value: yup.string().oneOf(["man", "woman"]),
+      label: yup.string().oneOf(["man", "woman"]),
+    })
+    .required("Выберите один из вариантов")
+    .test("is-one-option-selected", "Выберите один из вариантов", (option) => {
+      return option && (option.value === "man" || option.value === "woman");
+    }),
 });
 
 const checkboxGroupArraySchema = yup

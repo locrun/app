@@ -19,7 +19,7 @@ export interface FormValues {
   nickname: string
   name: string
   surname: string
-  sex: SelectOption | {},
+  sex: SelectOption;
 }
 
 const CreateForm: FC = () => {
@@ -39,7 +39,8 @@ const CreateForm: FC = () => {
   const { handleSubmit, control, formState } = form
   const { errors } = formState;
 
-  const submitForm: SubmitHandler<FormValues> = (data: FormValues, event) => {
+  const submitForm: SubmitHandler<FormValues | any> = (data: FormValues, event) => {
+    console.log(data)
     event?.preventDefault()
     const { nickname, name, surname, sex } = data
     dispatch(
@@ -113,8 +114,8 @@ const CreateForm: FC = () => {
           control={control}
           render={({ field: { onChange, value } }) => (
             <Autocomplete
-              value={value}
               options={options}
+              value={value as SelectOption}
               id="field-sex"
               onChange={onChange}
             />
