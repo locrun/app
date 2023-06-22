@@ -11,36 +11,6 @@
   margin-bottom: 8px;
 }
 
-.label {
-  display: inline-block;
-  margin-bottom: 8px;
-}
-
-.append {
-  width: 44px;
-  height: 44px;
-  padding: 12px;
-  margin-top: -8px;
-  border: 1.5px solid $slate-blue;
-  background: $white;
-  color: $slate-blue;
-  font-size: 30px;
-
-  &:after {
-    display: block;
-    content: url("../../assets/image/plus.svg");
-    line-height: 0;
-  }
-}
-
-.checkboxses {
-  margin-top: 25px;
-}
-
-.confirm {
-  color: $red;
-}
-
 .buttons {
   margin-top: 30px;
   display: flex;
@@ -49,48 +19,10 @@
     margin-top: 65px;
   }
 }
-.removeBtn {
-  width: 16px;
-  height: 16px;
-  margin-left: 18px;
-}
+
 .comebackBtn {
   padding: 11px 16px;
   border: 1.5px solid $slate-blue;
   background: none;
   color: $slate-blue;
-}
-// Стили для чекбоксов и радио кнопок.
-.checkboxGroup {
-  margin-top: 25px;
-  display: flex;
-  flex-direction: column;
-}
-.radioGroup {
-  margin-top: 25px;
-  display: flex;
-  flex-direction: column;
-}
-
-.inputCheckBoxWrapper {
-  display: flex;
-  align-items: center;
-  .inputCheckbox {
-    margin: 0;
-  }
-  label {
-    padding-left: 10px;
-  }
-}
-
-.inputRadioWrapper {
-  display: flex;
-  align-items: center;
-
-  .inputRadio {
-    margin: 0;
-  }
-  label {
-    padding-left: 10px;
-  }
 }

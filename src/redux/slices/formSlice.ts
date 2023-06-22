@@ -9,9 +9,9 @@ interface FormState {
   name: string;
   surname: string;
   sex: SelectOption;
-  selectedAdvantages: { name: string }[];
-  checkedCheckboxes: number[] | [];
-  selectedRadios: number[];
+  advantages: { name: string }[];
+  selectedCheckboxes: number[];
+  selectedRadio: number[];
   about: string;
 }
 
@@ -27,9 +27,9 @@ const initialState: FormStateContainer = {
     name: "",
     surname: "",
     sex: { value: "Не выбрано", label: "Не выбрано" },
-    selectedAdvantages: [],
-    checkedCheckboxes: [],
-    selectedRadios: [],
+    advantages: [],
+    selectedCheckboxes: [],
+    selectedRadio: [],
     about: "",
   },
 };

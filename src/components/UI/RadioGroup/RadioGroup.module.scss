@@ -1,0 +1,21 @@
+.radioGroup {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.inputLabel {
+  margin-bottom: 0;
+}
+.inputRadioWrapper {
+  display: flex;
+  align-items: center;
+
+  label {
+    padding-left: 10px;
+  }
+}
+
+.input {
+  height: auto;
+  margin: 0;
+}

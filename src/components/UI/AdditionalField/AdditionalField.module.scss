@@ -1,0 +1,41 @@
+@import "../../../styles/variables/variables.scss";
+.inputLabel {
+  display: inline-block;
+  margin-bottom: 8px !important;
+}
+.inputs {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 8px;
+}
+.input {
+  width: 300px;
+  height: 44px;
+  margin-bottom: 8px;
+}
+
+.removeBtn {
+  width: 16px;
+  height: 16px;
+  margin-left: 18px;
+}
+
+.append {
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  margin-top: -8px;
+  border: 1.5px solid $slate-blue;
+  background: $white;
+  color: $slate-blue;
+  font-size: 30px;
+
+  &:after {
+    display: block;
+    content: url("../../../assets/image/plus.svg");
+    line-height: 0;
+  }
+}
+.confirm {
+  color: $red;
+}

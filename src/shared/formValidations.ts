@@ -44,24 +44,23 @@ export const createFormSchema = yup.object().shape({
 });
 
 const checkboxGroupArraySchema = yup.array().min(1, "Выберите вариант");
-
 const radioGroupSchema = yup.string().required("Выберите вариант");
 
+const advantages = yup.array().of(
+  yup.object().shape({
+    name: yup
+      .string()
+      .required("Поле обязательно для заполнения")
+      .matches(/^[a-zA-Z0-9а-яА-Я]+$/, "Может содержать только буквы и цифры"),
+  })
+);
+
 export const advFormSchema = yup.object().shape({
-  advantages: yup.array().of(
-    yup.object().shape({
-      name: yup
-        .string()
-        .required("Поле обязательно для заполнения")
-        .matches(
-          /^[a-zA-Z0-9а-яА-Я]+$/,
-          "Может содержать только буквы и цифры"
-        ),
-    })
-  ),
-  checkboxGroup: checkboxGroupArraySchema,
-  radioGroup: radioGroupSchema,
+  advantages: advantages,
+  selectedCheckboxes: checkboxGroupArraySchema,
+  selectedRadio: radioGroupSchema,
 });
+
 export const aboutSchema = yup.object().shape({
   about: yup
     .string()
