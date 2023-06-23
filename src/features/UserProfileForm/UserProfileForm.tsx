@@ -34,7 +34,7 @@ const UserProfileForm: FC = () => {
     event?.preventDefault()
     const { phone, email } = data
     dispatch(setFormData({ ...formData, phone, email }))
-    //navigate("/step_1")
+    navigate("/step_1")
   }
 
   return (
@@ -84,9 +84,7 @@ const UserProfileForm: FC = () => {
         title="Начать"
         type="submit"
         id="button-start"
-        className={s.button}
-        onClick={() => navigate("/step_1")}
-      />
+        className={s.button} />
     </form >
   )
 }
