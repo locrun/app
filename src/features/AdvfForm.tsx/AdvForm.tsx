@@ -27,12 +27,12 @@ const AdvForm: FC = () => {
   const dispatch = useAppDispatch()
   const { formData } = useAppSelector(state => state.formData)
 
-  const defaultAdvantages = formData?.advantages.map(name => (name));
+  const arrayOfObjects = formData?.advantages.map(name => (name));
 
   const { register, handleSubmit, control, formState: { errors } } =
     useForm({
       defaultValues: {
-        advantages: defaultAdvantages.length > 0 ? defaultAdvantages :
+        advantages: arrayOfObjects.length > 0 ? arrayOfObjects :
           [{ name: "" }, { name: "" }, { name: "" }],
         selectedCheckboxes: formData.selectedCheckboxes.length > 0 ?
           formData.selectedCheckboxes?.toString().split(",") :
@@ -48,10 +48,9 @@ const AdvForm: FC = () => {
   const submitForm: SubmitHandler<AdvFormValues | any> = (data, e) => {
     e.preventDefault()
     const { advantages, selectedCheckboxes, selectedRadio } = data;
-
     dispatch(setFormData({
       ...formData,
-      advantages: [...advantages],
+      advantages: [...advantages.map(object => (object.name))],
       selectedCheckboxes: [...selectedCheckboxes.map((str: string) => parseInt(str))],
       selectedRadio: [Number(selectedRadio)]
     }))

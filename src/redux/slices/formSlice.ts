@@ -9,7 +9,7 @@ interface FormState {
   name: string;
   surname: string;
   sex: SelectOption;
-  advantages: { name: string }[];
+  advantages: string[];
   selectedCheckboxes: number[];
   selectedRadio: number[];
   about: string;
