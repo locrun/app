@@ -2,7 +2,7 @@ import { FC, Key } from 'react'
 import { Control, Controller, FieldError, FieldValues, UseFieldArrayAppend, UseFieldArrayRemove, UseFormRegister } from 'react-hook-form';
 import Button from 'components/Button'
 import Input from 'components/Input'
-import InputLabel from 'components/InputLabel'
+import InputLabel from 'components/Input/InputLabel'
 import IconSvg from 'components/IconSvg'
 import s from "./AdditionalField.module.scss"
 import { AdvFormValues } from 'features/AdvfForm.tsx/AdvForm';

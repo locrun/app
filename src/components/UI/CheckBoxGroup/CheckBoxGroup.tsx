@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { FieldError, UseFormRegister } from "react-hook-form";
 import { AdvFormValues } from 'features/AdvfForm.tsx/AdvForm';
 import Input from 'components/Input';
-import InputLabel from 'components/InputLabel';
+import InputLabel from 'components/Input/InputLabel';
 
 import s from "./CheckBoxGroup.module.scss";
 

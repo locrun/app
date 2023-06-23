@@ -7,7 +7,6 @@ import { setPercentProgressBar } from 'redux/slices/progressBarSlice';
 import { resetFormData, setFormData } from 'redux/slices/formSlice';
 import { yupResolver } from "@hookform/resolvers/yup";
 import Button from 'components/Button';
-import InputLabel from 'components/InputLabel';
 import ModalWindow from 'components/ModalWindow';
 import SuccessAlert from 'components/ModalWindow/SuccessAlert';
 import ErrorAlert from 'components/ModalWindow/ErrorAlert';
@@ -15,6 +14,7 @@ import { aboutSchema } from 'shared/formValidations';
 import { useSendUserFormMutation } from 'shared/api/formSend';
 
 import s from "./AboutMeForm.module.scss";
+import InputLabel from 'components/Input/InputLabel';
 
 interface About {
   about: string

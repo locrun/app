@@ -2,13 +2,15 @@
   z-index: 99;
   width: 200px;
   padding: 10px;
-  top: 50%;
   display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   align-self: center;
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  left: 40%;
   border-radius: 0.5rem;
   align-items: center;
   @media screen and (max-width: 768px) {

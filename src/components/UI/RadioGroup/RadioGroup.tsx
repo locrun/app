@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import InputLabel from 'components/InputLabel'
+import InputLabel from 'components/Input/InputLabel'
 import { AdvFormValues } from 'features/AdvfForm.tsx/AdvForm';
 import { FieldError, UseFormRegister } from 'react-hook-form';
 import s from "./RadioGroup.module.scss"

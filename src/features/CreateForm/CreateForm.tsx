@@ -6,7 +6,7 @@ import { useAppDispatch, useAppSelector } from 'redux/types';
 import { setPercentProgressBar } from 'redux/slices/progressBarSlice';
 import { setFormData } from 'redux/slices/formSlice';
 import Autocomplete from 'components/Autocomplete';
-import InputLabel from 'components/InputLabel';
+import InputLabel from 'components/Input/InputLabel';
 import Button from 'components/Button';
 import Input from 'components/Input';
 

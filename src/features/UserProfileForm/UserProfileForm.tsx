@@ -5,7 +5,7 @@ import { useForm, Controller, SubmitHandler } from "react-hook-form"
 import { useAppSelector, useAppDispatch } from 'redux/types';
 import { setFormData } from 'redux/slices/formSlice';
 import InputMask from 'react-input-mask';
-import InputLabel from 'components/InputLabel';
+import InputLabel from 'components/Input/InputLabel';
 import Button from 'components/Button';
 import Input from 'components/Input';
 import { userProfileSchema } from 'shared/formValidations';
