@@ -4,7 +4,7 @@ import s from "./Input.module.scss"
 
 interface InputProps {
   className?: string
-  defaultValue?: string
+  value?: string
   type?: string,
   disabled?: Boolean
   placeholder?: string
@@ -20,7 +20,6 @@ export interface IPropsInput extends
   DetailedHTMLProps<HTMLAttributes<HTMLInputElement>,
   HTMLInputElement> {
   className?: string
-  defaultValue?: string
   value?: string
   type?: string,
   disabled?: Boolean
@@ -41,9 +40,9 @@ const Input: FC<InputProps> = forwardRef(({ className, value, defaultValue, name
       name={name}
       id={id}
       ref={ref}
+      value={value}
       {...rest}
       checked={checked}
-      defaultValue={defaultValue}
       className={cn(s.input, className)}
       autoComplete={name}
       disabled={!!disabled}

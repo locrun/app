@@ -60,6 +60,7 @@ const CreateForm: FC = () => {
             <Input
               {...field}
               name='name'
+              value={field.value}
               id="field-nickname"
               placeholder="Placeholder"
             />
@@ -78,6 +79,7 @@ const CreateForm: FC = () => {
             <Input
               {...field}
               name='name'
+              value={field.value}
               id="name"
               placeholder="Placeholder"
             />
@@ -97,6 +99,7 @@ const CreateForm: FC = () => {
             <Input
               {...field}
               name='name'
+              value={field.value}
               id="field-surname"
               placeholder="Placeholder"
             />

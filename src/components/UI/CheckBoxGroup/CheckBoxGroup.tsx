@@ -25,7 +25,7 @@ const CheckBoxGroup: FC<Props> = ({ checkBoxes, register, errors }) => {
           <Input
             type="checkbox"
             id={checkbox.id}
-            defaultValue={checkbox.label}
+            value={checkbox.label}
             className={s.input}
             {...register("selectedCheckboxes", { required: true })}
           />

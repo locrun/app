@@ -27,8 +27,8 @@ const AdvForm: FC = () => {
   const dispatch = useAppDispatch()
   const { formData } = useAppSelector(state => state.formData)
 
-  const arrayOfObjects = formData?.advantages.map(name => (name));
-
+  const arrayOfObjects = formData?.advantages.map(name => ({ name }));
+  console.log(arrayOfObjects)
   const { register, handleSubmit, control, formState: { errors } } =
     useForm({
       defaultValues: {

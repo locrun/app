@@ -52,7 +52,7 @@ const UserProfileForm: FC = () => {
               mask="+7 (999) 999-99-99"
               id="tel"
               placeholder="+7 999 999-99-99"
-              defaultValue={props.field.value}
+              value={props.field.value}
               onChange={(value): void => {
                 props.field.onChange(value)
               }}
@@ -71,6 +71,7 @@ const UserProfileForm: FC = () => {
               {...field}
               className={s.inputEmail}
               type="email"
+              value={field.value}
               name='email'
               id="email"
               placeholder='tim.jennings@example.com'

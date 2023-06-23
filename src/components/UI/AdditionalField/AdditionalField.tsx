@@ -30,7 +30,7 @@ const AdditionalField: FC<Props> = ({ control, errors, advantagesFields, remove,
               render={({ field }) => (
                 <Input
                   {...field}
-                  defaultValue={field.value}
+                  value={field.value}
                   className={s.input}
                   id={`field-advatages-${index + 1}`}
                   placeholder="Placeholder"
