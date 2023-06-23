@@ -12,12 +12,12 @@ export const progressSlice = createSlice({
   name: "progress",
   initialState,
   reducers: {
-    setPercent: (state, action: PayloadAction<Progress>) => {
+    setPercentProgressBar: (state, action: PayloadAction<Progress>) => {
       state.percent = action.payload.percent;
     },
   },
 });
 
-export const { setPercent } = progressSlice.actions;
+export const { setPercentProgressBar } = progressSlice.actions;
 
 export default progressSlice.reducer;

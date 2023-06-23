@@ -2,10 +2,10 @@ import { FC, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SubmitHandler, useForm, Controller, FormState } from 'react-hook-form';
 import { useAppDispatch, useAppSelector } from 'redux/types';
-import { setFormData } from 'redux/slices/formSlice';
 import { setIsOpen } from 'redux/slices/modalWindowSlice';
+import { setPercentProgressBar } from 'redux/slices/progressBarSlice';
+import { resetFormData, setFormData } from 'redux/slices/formSlice';
 import { yupResolver } from "@hookform/resolvers/yup";
-import { setPercent } from 'redux/slices/progressBarSlice';
 import Button from 'components/Button';
 import InputLabel from 'components/InputLabel';
 import ModalWindow from 'components/ModalWindow';
@@ -52,13 +52,12 @@ const AboutMeForm: FC = () => {
 
     event?.preventDefault()
     const { about } = data
-    dispatch(
-      setFormData({ ...formData, about })
-    )
+    dispatch(setFormData({ ...formData, about }))
     setUpdated(true);
     dispatch(setIsOpen({ isOpen: true }))
+    dispatch(setPercentProgressBar({ percent: 0 }))
+    dispatch(resetFormData())
   };
-
 
   return (
     <>
@@ -108,7 +107,7 @@ const AboutMeForm: FC = () => {
             id="button-back"
             className={s.comebackBtn}
             onClick={() => {
-              navigate("/step_2"); dispatch(setPercent({ percent: 50 }))
+              navigate("/step_2"); dispatch(setPercentProgressBar({ percent: 50 }))
             }} />
           <Button
             title="Отправить"

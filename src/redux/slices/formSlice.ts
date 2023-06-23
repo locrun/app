@@ -38,12 +38,25 @@ export const formSlice = createSlice({
   initialState,
   reducers: {
     setFormData: (state, action: PayloadAction<FormState>) => {
-      console.log(action.payload);
       state.formData = action.payload;
+    },
+    resetFormData: (state) => {
+      state.formData = {
+        phone: "",
+        email: "",
+        nickname: "",
+        name: "",
+        surname: "",
+        sex: { value: "Не выбрано", label: "Не выбрано" },
+        advantages: [],
+        selectedCheckboxes: [],
+        selectedRadio: [],
+        about: "",
+      };
     },
   },
 });
 
-export const { setFormData } = formSlice.actions;
+export const { setFormData, resetFormData } = formSlice.actions;
 
 export default formSlice.reducer;

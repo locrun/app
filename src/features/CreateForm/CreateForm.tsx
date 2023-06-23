@@ -3,7 +3,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from 'react-router-dom';
 import { useForm, Controller, SubmitHandler } from "react-hook-form"
 import { useAppDispatch, useAppSelector } from 'redux/types';
-import { setPercent } from 'redux/slices/progressBarSlice';
+import { setPercentProgressBar } from 'redux/slices/progressBarSlice';
 import { setFormData } from 'redux/slices/formSlice';
 import Autocomplete from 'components/Autocomplete';
 import InputLabel from 'components/InputLabel';
@@ -45,7 +45,7 @@ const CreateForm: FC = () => {
     dispatch(
       setFormData({ ...formData, nickname, name, surname, sex })
     )
-    dispatch(setPercent({ percent: 50 }))
+    dispatch(setPercentProgressBar({ percent: 50 }))
     navigate("/step_2")
   }
 

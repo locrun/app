@@ -4,7 +4,7 @@ import { SubmitHandler, useForm, useFieldArray } from 'react-hook-form';
 import { yupResolver } from "@hookform/resolvers/yup";
 import { advFormSchema } from 'shared/formValidations';
 import { useNavigate } from 'react-router-dom';
-import { setPercent } from 'redux/slices/progressBarSlice'
+import { setPercentProgressBar } from 'redux/slices/progressBarSlice'
 import { useAppDispatch, useAppSelector } from 'redux/types'
 import { setFormData } from 'redux/slices/formSlice';
 import AdditionalField from 'components/UI/AdditionalField';
@@ -28,7 +28,7 @@ const AdvForm: FC = () => {
   const { formData } = useAppSelector(state => state.formData)
 
   const arrayOfObjects = formData?.advantages.map(name => ({ name }));
-  console.log(arrayOfObjects)
+
   const { register, handleSubmit, control, formState: { errors } } =
     useForm({
       defaultValues: {
@@ -54,7 +54,7 @@ const AdvForm: FC = () => {
       selectedCheckboxes: [...selectedCheckboxes.map((str: string) => parseInt(str))],
       selectedRadio: [Number(selectedRadio)]
     }))
-    dispatch(setPercent({ percent: 100 }))
+    dispatch(setPercentProgressBar({ percent: 100 }))
     navigate("/step_3")
   }
 
