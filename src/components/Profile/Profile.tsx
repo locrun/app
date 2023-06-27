@@ -5,9 +5,9 @@ import s from "./Profile.module.scss"
 
 
 const links = [
-  { title: "Telegram", href: "https://t.me/runar_n" },
-  { title: "GitHub", href: "https://github.com/locrun" },
-  { title: "Resume", href: "https://kazan.hh.ru/resume/a3b27c5aff077114740039ed1f3375357a544f" }
+  { title: "Telegram", href: "" },
+  { title: "GitHub", href: "" },
+  { title: "Resume", href: "" }
 ]
 
 const Profile: FC = () => {
